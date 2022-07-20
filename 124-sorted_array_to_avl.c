@@ -24,3 +24,17 @@ avl_t *aux_sort(avl_t *parent, int *array, int begin, int last)
 		root->right = aux_sort(root, array, mid + 1, last);
 		return (root);
 	}
+	return (NULL);
+}
+/**
+ * sorted_array_to_avl - create a alv tree from sorted array
+ * @array: sorted array
+ * @size: size of the sorted array
+ * Return: alv tree form sorted array
+ */
+avl_t *sorted_array_to_avl(int *array, size_t size)
+{
+	if (array == NULL || size == 0)
+		return (NULL);
+	return (aux_sort(NULL, array, 0, ((int)(size)) - 1));
+}
