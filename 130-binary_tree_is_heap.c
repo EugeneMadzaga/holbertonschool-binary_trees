@@ -23,7 +23,7 @@ size_t binary_tree_height(const binary_tree_t *tree)
 			r = tree->right ? 1 + binary_tree_height(tree->right) : 0;
 		}
 		return ((l > r) ? l : r);
-		}
+	}
 }
 /**
  * binary_tree_balance - Measures balance factor of a binary tree
@@ -70,7 +70,6 @@ int tree_is_perfect(const binary_tree_t *tree)
 		return (0);
 	}
 }
-
 /**
  * binary_tree_is_perfect - perfect or not a tree
  * @tree: tree to check
